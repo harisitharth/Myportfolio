@@ -7,23 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="body">
-
-  <!-- fade wrapper -->
   <div class="fade-top">
+   
+
+
 
     <nav>
       <a href="#home" id="home-link">Home</a>
       <a href="#about" id="about-link">About</a>
       <a href="#contact" id="contact-link">Contact</a>
     </nav>
-
+   
     <header class="header">
       <h1>Hari Sitharth</h1>
       <p>Web Developer | Designer | Dreamer</p>
       <div class="profile">
-  <img src="photo1.jpg" alt="My Photo">
-  
-</div>
+        <img src="photo1.jpg" alt="My Photo">
+      </div>
+       
 
       <br><br>
 
@@ -42,24 +43,18 @@
     </section>
 
     <section id="projects">
-    
-      
-      
-  <h2>Projects</h2>
+      <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Portfolio Website</h3>
-    <p>A sleek personal portfolio built with HTML and CSS.</p>
-  </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A sleek personal portfolio built with HTML and CSS.</p>
+      </div>
 
-  <div class="project">
-    <h3>Anti sleep glass</h3>
-    <p>Avoid accident</p>
-    <!-- PDF Button -->
-    <a href="Anti_Sleep_Glass_Project.pdf" target="_blank" class="btn">View Project PDF</a>
-  </div>
-</section>
-
+      <div class="project">
+        <h3>Anti sleep glass</h3>
+        <p>Avoid accident</p>
+        <!-- PDF Button -->
+        <a href="Anti_Sleep_Glass_Project.pdf" target="_blank" class="btn">View Project PDF</a>
       </div>
     </section>
 
@@ -70,8 +65,14 @@
     </section>
 
     <footer>
-      <p>© 2025 Hari. All rights reserved.</p>
+      <p> &#169; 2025 Hari. All rights reserved.</p>
     </footer>
+    <button class="toggle-btn">🌙 Dark Mode</button>
+    <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">
+    🌙 Dark Mode
+  </button>
+
+    
 
   </div>
 </body>

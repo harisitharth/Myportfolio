@@ -4,14 +4,15 @@
   padding: 0;
   background: #f0f0f0;
   color: #333;
+  transition: background 0.6s ease, color 0.6s ease; /* smooth mode change */
 }
 
 header {
-  background-image: url('backgroundiamge.jpg');
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('backgroundiamge.jpg');
   color: #fff;
   padding: 2rem;
   text-align: center;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 
 nav {
@@ -20,13 +21,18 @@ nav {
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.6s ease;
 }
 
 #home-link,
 #about-link,
-#contact {
+#contact-link {
   transform: scale(1);
-  transition: transform 0.2s ease; 
+  transition: transform 0.3s ease; 
 }
 
 #home-link:hover,
@@ -52,6 +58,7 @@ section {
   padding: 1rem;
   margin: 1rem 0;
   border-left: 4px solid #333;
+  transition: background 0.6s ease, color 0.6s ease, border-color 0.6s ease;
 }
 
 footer {
@@ -59,70 +66,99 @@ footer {
   padding: 1rem;
   background: #333;
   color: #fff;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 
 .btn {
   border-radius: 10px;
   background-color: #444;
   color: #fff;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: white;
-  transition: background-color 1s ease;
+  transition: background-color 0.6s ease;
   color: black;
 }
-
-
 
 .fade-top {
   position: relative;
 }
 
-/* Top fade effect */
 .fade-top::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 100px; /* Fade height */
+  height: 100px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
   pointer-events: none;
   z-index: 999;
 }
+
 .profile {
   text-align: center;
   margin-top: 50px;
 }
 
 .profile img {
-  width: 250px;          /* size adjust panna nee change pannalam */
+  width: 250px;
   height: 320px;
-  object-fit: cover;     /* image crop aagi fit aagum */
-  border-radius: 50% / 40%;  /* oval shape */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* shadow neat look */
+  object-fit: cover;
+  border-radius: 50% / 40%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-.profile p {
-  margin-top: 15px;
-  font-size: 18px;
-  color: white;
-}
 html {
   scroll-behavior: smooth;
 }
-nav {
-  position: sticky;   /* or fixed use panna kudaikum */
-  top: 0;
-  width: 100%;
-  background: #444;
+
+/* 🌙 Toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ddd;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  z-index: 1000;  /* content mela irukanum */
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.toggle-btn:hover {
+  background: #bbb;
+  transform: scale(1.05);
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode nav {
+  background: #222;
+}
+
+.dark-mode footer {
+  background: #222;
+  color: #ccc;
+}
+
+.dark-mode .project {
+  background: #1e1e1e;
+  border-left: 4px solid #f0f0f0;
+}
 
 
